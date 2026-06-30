@@ -1,0 +1,29 @@
+### Listar todos os livros
+GET http://localhost:3000/livros
+
+### Buscar livro pelo id 1
+GET http://localhost:3000/livros/1
+
+### Tentar buscar um id que nao existe
+GET http://localhost:3000/livros/99
+
+### Criar um novo livro
+POST http://localhost:3000/livros
+Content-Type: application/json
+
+{
+"nomeLivro": "Segunda Fundação",
+"autor": "Isaac Asimov"
+}
+
+### Atualizar o livro de id 1
+PUT http://localhost:3000/livros/1
+Content-Type: application/json
+
+{
+"nomeLivro": "O Fim da Infância",
+"autor": "Arthur C. Clarke"
+}
+
+### Deletar o livro de id 3
+DELETE http://localhost:3000/livros/3
