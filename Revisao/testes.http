@@ -1,0 +1,39 @@
+### GET todos
+GET http://localhost:3000/livros
+
+### GET um
+GET http://localhost:3000/livros/1
+
+### GET inexistente
+GET http://localhost:3000/livros/100
+
+
+### Criar um novo livro
+POST http://localhost:3000/livros
+Content-Type: application/json
+
+{
+"nome": "Fundação e Império",
+"valor": 99.00
+}
+
+### Atualizar o livro de id 1
+PUT http://localhost:3000/livros/1
+Content-Type: application/json
+
+{
+"nome": "A Segunda Fundação",
+"valor": 85.00
+}
+
+### Atualizar com erro
+PUT http://localhost:3000/livros/1
+Content-Type: application/json
+
+{
+
+"valor": 85.00
+}
+
+### Deletar o livro de id 1
+DELETE http://localhost:3000/livros/1
